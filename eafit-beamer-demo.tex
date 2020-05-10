@@ -1,14 +1,14 @@
 %!TEX program = xelatex
 
-% Name           : hsrm-beamer-demo.sty
-% Author         : Benjamin Weiss (benjamin.weiss@kreatiefton.de)
-% Version        : 0.4
+% Name           : eafit-beamer-demo.sty
+% Author         : Benjamin Weiss & Santiago Hincapie
+% Version        : 0.1
 % Created on     : 05.05.2013
-% Last Edited on : 24.03.2014
+% Last Edited on : 10.05.2020
 % Copyright      : Copyright (c) 2013-2014 by Benjamin Weiss. All rights reserved.
 % License        : This file may be distributed and/or modified under the
 %                  GNU Public License.
-% Description    : HSRM beamer theme demonstration. Also includes a short 
+% Description    : EAFIT beamer theme demonstration. Also includes a short
 %                  Tutorial regarding the beamer class.
 
 \documentclass[compress]{beamer}
@@ -16,7 +16,6 @@
 % Common packages
 %--------------------------------------------------------------------------
 \usepackage[spanish]{babel}
-
 \usepackage{graphicx}
 \usepackage{multicol}
 % Erweiterte Tabellenfunktionen
@@ -25,31 +24,31 @@
 % Listingserweiterung
 \usepackage{listings}
 \lstset{ %
-language=[LaTeX]TeX,
-basicstyle=\normalsize\ttfamily,
-keywordstyle=,
-numbers=left,
-numberstyle=\tiny\ttfamily,
-stepnumber=1,
-showspaces=false,
-showstringspaces=false,
-showtabs=false,
-breaklines=true,
-frame=tb,
-framerule=0.5pt,
-tabsize=4,
-framexleftmargin=0.5em,
-framexrightmargin=0.5em,
-xleftmargin=0.5em,
-xrightmargin=0.5em
+  language=[LaTeX]TeX,
+  basicstyle=\normalsize\ttfamily,
+  keywordstyle=,
+  numbers=left,
+  numberstyle=\tiny\ttfamily,
+  stepnumber=1,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  breaklines=true,
+  frame=tb,
+  framerule=0.5pt,
+  tabsize=4,
+  framexleftmargin=0.5em,
+  framexrightmargin=0.5em,
+  xleftmargin=0.5em,
+  xrightmargin=0.5em
 }
 
 %--------------------------------------------------------------------------
 % Load theme
 %--------------------------------------------------------------------------
-\usetheme{hsrm}
+\usetheme{eafit}
 
-\usepackage{dtklogos} % must be loaded after theme
+%\usepackage{dtklogos} % must be loaded after theme
 \usepackage{tikz}
 \usetikzlibrary{mindmap,backgrounds}
 
@@ -68,59 +67,62 @@ xrightmargin=0.5em
 \setbeameroption{show notes}
 
 \begin{document}
-%--------------------------------------------------------------------------
+% --------------------------------------------------------------------------
 % Titlepage
 %--------------------------------------------------------------------------
 
 \maketitle
 
-%\begin{frame}[plain]
-%	\titlepage
-%\end{frame}
-
 %--------------------------------------------------------------------------
 % Table of contents
 %--------------------------------------------------------------------------
-\section*{Gliederung}
-\begin{frame}{Gliederung}
-	% hideallsubsections ist empfehlenswert für längere Präsentationen
+\section*{Contenido}
+\begin{frame}{Contenido}
+	% hideallsubsections se recomienda para presentaciones más largas
 	\tableofcontents[hideallsubsections]
 \end{frame}
 
 %--------------------------------------------------------------------------
 % Content
 %--------------------------------------------------------------------------
-\section{Einleitung}
+\section{Introduccion}
 
-\begin{frame}{Was ist Beamer?}
-	Die Beamer Klassen für \LaTeX\ dienen zur Erstellung von Präsentationen, welche mit einem Beamer vorgeführt werden sollen. Das Textsatzsystem erzeugt dazu PDF Dateien, die von einer großen Anzahl an Programmen gezeigt werden können.
-	
-	Das hier vorgestellte Theme für Beamer macht die Erstellung von Folien entsprechend dem Corporate Design der Hochschule {\Medium RheinMain} (Grundkenntnisse in \LaTeX\ vorausgesetzt) zu einem Kinderspiel.
+\begin{frame}{Que es Beamer?}
+  Beamer es una clase de \LaTeX\ para crear diapositivas, posee una amplia gama
+  de plantillas (como esta) y un conjunto interesante de características crear
+  buenas presentaciones.
+
+  Personalmente odiaba el tema oficial de la universidad, así que inspirado en
+  la plantilla de la Universidad de RheinMain creé este tema, este trata de
+  seguir los colores y imagen corporativa, con un poco mas de estilo.
 \end{frame}
 
-\begin{frame}{Systemvoraussetzungen}
-	Um erfolgreich Präsentationen mit diesem Theme erstellen zu können, sind folgende Voraussetzungen vom System zu erfüllen:
+\begin{frame}{Dependencias}
+	Para utilizar con exito este tema, el sistema debe cumplir
 	\begin{itemize}
-		\item Zum Setzen der Folien muss XeTeX verwendet werden.
-		\item Neben einigen Standardpaketen müssen die Pakete \texttt{beamer}, \texttt{pgf} und \texttt{xcolor} installiert sein.
-		\item Die Schriften \quoted{Flama-Light}, \quoted{Flama-Book} und \quoted{Flama-Medium} sollten installiert sein. Alternativ: \quoted{Arial}\\\url{http://www.felicianotypefoundry.com/}
+		\item XeTex debe estar instalado y ser usado para compilar el archivo
+		\texttt{.tex}.
+		\item Además de los paquetes estándar, deben instalarse los paquetes \
+		texttt {beamer}, \ texttt {pgf} y \ texttt {xcolor}. 
+		\item Las fuentes \quoted{Flama-Light}, \quoted{Flama-Book} y
+		\quoted{Flama-Medium} deben instalarse. ver carpeta \texttt{fonts/}
 	\end{itemize}
 \end{frame}
 
 \section{Tutorial}
-\begin{frame}[containsverbatim]{Grundaufbau des Dokuments}
-Der Grundaufbau ist einfach:
+\begin{frame}[containsverbatim]{Estructura basica}
+La estructura basica es simple:
 \begin{lstlisting}
 \documentclass[compress]{beamer}
-% Theme laden
-\usetheme{hsrm}
-% Allgemeine Präsentationseinstellungen 
+% Cargar el tema
+\usetheme{eafit}
+% Configuracion de la presentacion
 \title{Titulo de la presentacion}
-\subtitle{Untertitel der Präsentation}
-\author{Ihr Name}
-\institute{Studienbereich\\Hochschule {\Medium RheinMain}}
+\subtitle{Subtitulo de la presentacion}
+\author{Tu nombre}
+\institute{Universidad EAFIT}
 \begin{document}
-% Folien
+% Diapos
 \end{document}
 \end{lstlisting}
 \end{frame}
@@ -418,14 +420,7 @@ Schauen Sie einfach in den Quelltext, um zu sehen wie die Folien erstellt wurden
 \begin{frame}{Foto mit Copyright}
 	\begin{figure}
 		\centering
-		\includegraphicscopyright[width=\linewidth]{photo.jpg}{Copyright by \href{http://netzlemming.deviantart.com/}{Netzlemming}, \href{http://creativecommons.org/licenses/by-nc/3.0/}{CC BY-NC 3.0 License}}
-	\end{figure}
-\end{frame}
-\begin{frame}{Plot mit Beschriftung}
-	\begin{figure}
-		\centering
-		\input{plot.tex}
-		\caption{LFE channel frequency spectrum}
+		\includegraphicscopyright[width=\linewidth]{res/photo.jpg}{Copyright by \href{http://netzlemming.deviantart.com/}{Netzlemming}, \href{http://creativecommons.org/licenses/by-nc/3.0/}{CC BY-NC 3.0 License}}
 	\end{figure}
 \end{frame}
 
@@ -451,11 +446,11 @@ Schauen Sie einfach in den Quelltext, um zu sehen wie die Folien erstellt wurden
 
 \subsection{Formeln}
 \begin{frame}{Formeln}
-\begin{block}{Fourierintegral}
+%\begin{block}{Fourierintegral}
 \begin{equation*}
 F(\textrm{j}\omega) = \int\limits_{-\infty}^{\infty} f(t)\cdot\textrm{e}^{-\textrm{j}\omega t} dt
 \end{equation*}
-\end{block}
+%\end{block}
 \begin{block}{Fakultät}
 \begin{equation*}
 	n! = 1\cdot 2 \cdot 3 \cdot\ldots\cdot n = \prod_{k=1}^n k
