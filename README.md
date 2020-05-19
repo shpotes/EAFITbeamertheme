@@ -5,4 +5,4 @@ El tema está distribuido bajo la [GNU Public License](http://www.gnu.org/licens
 
 Para preguntas y comentarios, favor contácteme en la siguiente dirección de correo electrónico.
 
-[shinca12@eafit.edu.co](mailto:shinca12@eafit.edu.co)
+shinca12[at]eafit[dot]edu[dot]co
