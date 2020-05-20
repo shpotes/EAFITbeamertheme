@@ -16,12 +16,12 @@
 % Common packages
 %--------------------------------------------------------------------------
 \usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{multicol}
-% Erweiterte Tabellenfunktionen
+\usepackage[numbers]{natbib}
 \usepackage{tabularx,ragged2e}
 \usepackage{booktabs}
-% Listingserweiterung
 \usepackage{listings}
 \lstset{ %
   language=[LaTeX]TeX,
@@ -362,20 +362,9 @@ F(\textrm{j}\omega) = \int\limits_{-\infty}^{\infty} f(t)\cdot\textrm{e}^{-\text
 \end{frame}
 
 \begin{frame}{Bibliografia}
-	\begin{thebibliography}{10}
-    
-	\beamertemplatebookbibitems
-	\bibitem{Oppenheim2009}
-	Alan~V.~Oppenheim
-	\newblock \doublequoted{Discrete-Time Signal Processing}
-	\newblock Prentice Hall Press, 2009
-
-	\beamertemplatearticlebibitems
-	\bibitem{EBU2011}
-	European~Broadcasting~Union
-	\newblock \doublequoted{Specification of the Broadcast Wave Format (BWF)}
-	\newblock 2011
-  \end{thebibliography}
+  \bibliographystyle{plain}
+  \nocite{*}
+  \bibliography{ref}
 \end{frame}
 
 \section{Panorama}
@@ -386,6 +375,7 @@ F(\textrm{j}\omega) = \int\limits_{-\infty}^{\infty} f(t)\cdot\textrm{e}^{-\text
       colores, etc.
     \item No ha sido probado ni en Windows ni en mac, es posible que genere
       errores con las fuentes.
+    \item \texttt{allowframebreaks} genera un par de problemas
 	\end{itemize}
 \end{frame}
 
